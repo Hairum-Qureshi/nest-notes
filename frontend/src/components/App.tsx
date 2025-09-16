@@ -7,6 +7,7 @@ import NavbarLayout from "./layouts/NavbarLayout";
 import SignUp from "./pages/authentication/SignUp";
 import SignIn from "./pages/authentication/SignIn";
 import About from "./pages/About";
+import SideNavbarLayout from "./layouts/SideNavbarLayout";
 
 export default function App() {
 	return (
@@ -14,11 +15,13 @@ export default function App() {
 			<Routes>
 				<Route element={<NavbarLayout />}>
 					<Route path="/" element={<Landing />} />
-					<Route path="/dashboard" element={<Dashboard />} />
 					<Route path="/about" element={<About />} />
 				</Route>
 				<Route path="/sign-up" element={<SignUp />} />
 				<Route path="/sign-in" element={<SignIn />} />
+				<Route element={<SideNavbarLayout />}>
+					<Route path="/dashboard" element={<Dashboard />} />
+				</Route>
 			</Routes>
 		</BrowserRouter>
 	);
