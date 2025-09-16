@@ -35,7 +35,7 @@ export default function Navbar() {
 					Contact
 				</Link>
 				<Link
-					to="/"
+					to="/sign-up"
 					className="[text-shadow:0_0_8px_rgba(56,189,248,0.8),0_0_16px_rgba(56,189,248,0.6),0_0_24px_rgba(56,189,248,0.4)]"
 				>
 					Sign Up
