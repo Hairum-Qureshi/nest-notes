@@ -8,6 +8,8 @@ import SignUp from "./pages/authentication/SignUp";
 import SignIn from "./pages/authentication/SignIn";
 import About from "./pages/About";
 import SideNavbarLayout from "./layouts/SideNavbarLayout";
+import Profile from "./pages/profile/Profile";
+import Settings from "./pages/profile/Settings";
 
 export default function App() {
 	return (
@@ -21,6 +23,8 @@ export default function App() {
 				<Route path="/sign-in" element={<SignIn />} />
 				<Route element={<SideNavbarLayout />}>
 					<Route path="/dashboard" element={<Dashboard />} />
+					<Route path="/:uid/profile" element={<Profile />} />
+					<Route path="/settings" element={<Settings />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
